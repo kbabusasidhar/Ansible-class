@@ -1,0 +1,39 @@
+For windows ansible: go to your linux machine
+
+
+First install windows on workstation: 
+Go through the google drive: Ansible-class8
+once done
+
+step1: ping to windows machine
+step2: add below in: vi /etc/hosts
+       IPaddress FQDN hostname
+step3: yum install pip python-pip
+step4: pip install pywinrm
+step5:
+ansible.cfg
+
+[defaults]
+remote_user = ansible
+host_key_checking = false
+inventory = inventory
+
+step6:
+inventory
+  
+[win]
+windows001
+
+[win:vars]
+ansible_user=ansible
+ansible_password=Password@123
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
+
+step7:
+testing:
+
+ansible win -i inventory -m win_ping
+
+
+

@@ -5,9 +5,11 @@ First install windows on workstation:
 Go through the google drive: Ansible-class8
 once done
 
-step1: ping to windows machine
+Steps to do in LINUX:
+_____________________
+step1: ping to windows machine (ping IPaddress of windows machine - command is - ping ipaddress)
 step2: add below in: vi /etc/hosts
-       IPaddress FQDN hostname
+       windowsIPaddress FQDN hostname
 step3: yum install pip python-pip
 step4: pip install pywinrm
 step5:
